@@ -22,6 +22,9 @@ To use them, simply copy the text below into your git config file:
 * Locally in a repo: ".git/config"
 * Globally: "~/.gitconfig"
 
+As a local alias shortcut: `curl https://raw.githubusercontent.com/internetimagery/alias-git-flow/master/config >> .git/config`
+
+
 ### Usage
 
 To use git flow. Ensure you first have a branch named "develop". `git branch develop`
