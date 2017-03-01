@@ -47,4 +47,6 @@ Not only does this not require any additional software. But it also doesn't requ
 
 Hopefully this improves your git workflow! :heart:
 
+ps: If you're working in a production setting, you should [use the git-flow extension.](https://github.com/nvie/gitflow)
+
 Please, those more experienced with git/bash than I, send pull requests / issues / comments!
