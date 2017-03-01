@@ -2,21 +2,32 @@
 
 This method adds some commands to follow the excellent [git flow methodology](http://nvie.com/posts/a-successful-git-branching-model/) using simple git aliases.
 
-To use them, simply add the text from the "config" file in this repo to your own git config.
-
-To use git flow. Ensure you first have a branch named "develop".
-
-Then start a new feature:
+To use them, simply copy the text below into your git config file:
 
 ```
-git feature start my-feature
+[alias]
+  feature = "!git checkout develop && echo feature | git"
+  release = "!git checkout develop && echo release | git"
+  hotfix = "!git checkout master && echo hotfix | git"
+  support = "!git checkout master && echo support | git"
+
+  start = "!read BRANCH && git checkout -b $BRANCH-$1 && echo Starting"
+  finish = "!read BRANCH && git merge $BRANCH-$1 --no-ff && echo Merging"
+
+  publish = "!git push origin `git symbolic-ref --short HEAD`"
 ```
 
-Work on your feature. Committing etc all you like. Then finally finish the feature and merge it back:
+You can find the config file:
 
-```
-git feature finish my-feature
-```
+* Locally in a repo: ".git/config"
+* Globally: "~/.gitconfig"
+
+
+To use git flow. Ensure you first have a branch named "develop". `git branch develop`
+
+Then start a new feature: `git feature start my-feature`
+
+Work on your feature. Committing etc all you like. Then finally finish the feature and merge it back: `git feature finish my-feature`
 
 The same start / finish functionality applies to the other tasks of git-flow.
 
@@ -28,3 +39,7 @@ git hotfix finish
 git support start
 git support finish
 ```
+
+Hopefully this improves your git workflow! :heart:
+
+Please, those more experienced with git/bash than I, send pull requests / issues / comments!
