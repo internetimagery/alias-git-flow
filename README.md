@@ -17,11 +17,12 @@ To use them, simply copy the text below into your git config file:
   publish = "!git push origin `git symbolic-ref --short HEAD`"
 ```
 
-You can find the config file:
+### You can find the config file:
 
 * Locally in a repo: ".git/config"
 * Globally: "~/.gitconfig"
 
+### Usage
 
 To use git flow. Ensure you first have a branch named "develop". `git branch develop`
 
@@ -39,6 +40,10 @@ git hotfix finish <name>
 git support start <name>
 git support finish <name>
 ```
+
+### Why do this?
+
+Not only does this not require any additional software. But it also doesn't require any middleware commands (ie `git !!FLOW!! release start <my-relase>`). Finally, you can put these alias's in a local repo, to enable "flow" only for that project.
 
 Hopefully this improves your git workflow! :heart:
 
