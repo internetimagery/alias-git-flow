@@ -33,6 +33,8 @@ Work on your feature. Committing etc all you like. Then finally finish the featu
 The same start / finish functionality applies to the other tasks of git-flow.
 
 ```
+git feature start <name>
+git feature finish <name>
 git release start <name>
 git release finish <name>
 git hotfix start <name>
