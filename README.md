@@ -32,12 +32,12 @@ Work on your feature. Committing etc all you like. Then finally finish the featu
 The same start / finish functionality applies to the other tasks of git-flow.
 
 ```
-git release start
-git release finish
-git hotfix start
-git hotfix finish
-git support start
-git support finish
+git release start <name>
+git release finish <name>
+git hotfix start <name>
+git hotfix finish <name>
+git support start <name>
+git support finish <name>
 ```
 
 Hopefully this improves your git workflow! :heart:
