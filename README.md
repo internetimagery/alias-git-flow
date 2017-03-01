@@ -1,4 +1,4 @@
-# Super Simple Git Flow!
+# Simple Alias Git Flow!
 
 This method adds some commands to follow the excellent [git flow methodology](http://nvie.com/posts/a-successful-git-branching-model/) using simple git aliases.
 
