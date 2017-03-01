@@ -1,0 +1,11 @@
+[alias]
+
+	feature = "!git checkout develop && echo feature | git "
+	release = "!git checkout develop && echo release | git "
+	hotfix = "!git checkout master && echo hotfix | git "
+	support = "!git checkout master && echo support | git "
+
+	start = "!read BRANCH && git checkout -b $BRANCH-$1 && echo Starting"
+	finish = "!read BRANCH && git merge $BRANCH-$1 --no-ff && echo Merging"
+
+	publish = "!git push origin `git symbolic-ref --short HEAD`"
