@@ -12,7 +12,7 @@ To use them, simply copy the text below into your git config file:
   support = "!git checkout master && echo support | git"
 
   start = "!read BRANCH && git checkout -b $BRANCH-$1 && echo Starting"
-  finish = "!read BRANCH && git merge $BRANCH-$1 --no-ff && echo Merging"
+  finish = "!read BRANCH && git merge $BRANCH-$1 --no-ff && git checkout develop && git merge $BRANCH-$1 --no-ff && echo Merging"
 
   publish = "!git push origin `git symbolic-ref --short HEAD` && echo Publishing"
 ```
