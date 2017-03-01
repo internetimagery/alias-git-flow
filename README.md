@@ -14,7 +14,7 @@ To use them, simply copy the text below into your git config file:
   start = "!read BRANCH && git checkout -b $BRANCH-$1 && echo Starting"
   finish = "!read BRANCH && git merge $BRANCH-$1 --no-ff && echo Merging"
 
-  publish = "!git push origin `git symbolic-ref --short HEAD`"
+  publish = "!git push origin `git symbolic-ref --short HEAD` && echo Publishing"
 ```
 
 ### You can find the config file:
